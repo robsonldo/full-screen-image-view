@@ -29,6 +29,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return imagesUri.size();
     }
+
     @Override
     public CharSequence getPageTitle(int position) {
         return "";

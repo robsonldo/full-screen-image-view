@@ -32,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
         final Uri uri = Uri.parse("android.resource://" + getPackageName() + "/drawable/android1");
         final Uri uri2 = Uri.parse("android.resource://" + getPackageName() + "/drawable/android3");
+        final Uri uri3 = Uri.parse("https://st3.depositphotos.com/4478807/34931/i/1600/depositphotos_349318364-stock-photo-outbreak-coronavirus-flu-virus-2019.jpg");
 
         final ArrayList<String> uriString = new ArrayList<>();
         uriString.add(uri.toString());
         uriString.add(uri2.toString());
-        uriString.add(uri.toString());
+        uriString.add(uri3.toString());
 
         ivContain1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,12 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 onImageClickAction(uriString, 0);
             }
         });
+
         ivContain2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onImageClickAction(uriString, 1);
             }
         });
+
         ivContain3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,10 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         requestPermissions();
-
 
         ViewImagePicker viewImagePicker = findViewById(R.id.vew_image_picker);
         List<Uri> imageItems = new ArrayList<>();
